@@ -17,7 +17,7 @@ public interface AddressMapper {
 
     Address fromDto(AddressDTO addressDTO);
 
-    Address updateAddress(AddressDTO addressDTO, @MappingTarget Address address);
+    Address update(AddressDTO addressDTO, @MappingTarget Address address);
 
     @AfterMapping
     default void updateStreets(AddressDTO addressDTO, @MappingTarget Address address) {

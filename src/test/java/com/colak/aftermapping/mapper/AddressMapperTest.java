@@ -30,7 +30,7 @@ class AddressMapperTest {
         var address = new Address(List.of(street), "New York");
 
         var addressMapper = AddressMapper.INSTANCE;
-        var updatedAddress = addressMapper.updateAddress(addressDTO, address);
+        var updatedAddress = addressMapper.update(addressDTO, address);
         assertEquals("Main Street", updatedAddress.getStreets().getFirst().getStreetName());
     }
 }

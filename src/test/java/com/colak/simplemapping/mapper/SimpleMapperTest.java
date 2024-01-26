@@ -25,7 +25,7 @@ class SimpleMapperTest {
         SimpleModel simpleModel = new SimpleModel("Broadway", "New York");
 
         var addressMapper = SimpleMapper.INSTANCE;
-        var updatedModel = addressMapper.updateAddress(simpleDTO, simpleModel);
+        var updatedModel = addressMapper.update(simpleDTO, simpleModel);
         assertEquals("Main Street", updatedModel.getStreet());
     }
 }

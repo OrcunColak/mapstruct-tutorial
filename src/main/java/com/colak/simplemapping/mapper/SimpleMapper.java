@@ -12,6 +12,6 @@ public interface SimpleMapper {
 
     SimpleModel fromDto(SimpleDTO addressDTO);
 
-    SimpleModel updateAddress(SimpleDTO addressDTO, @MappingTarget SimpleModel address);
+    SimpleModel update(SimpleDTO addressDTO, @MappingTarget SimpleModel address);
 
 }
