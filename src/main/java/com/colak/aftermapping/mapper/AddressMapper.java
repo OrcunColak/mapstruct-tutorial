@@ -19,6 +19,9 @@ public interface AddressMapper {
 
     Address update(AddressDTO addressDTO, @MappingTarget Address address);
 
+    // It is also possible to modify the data to be mapped
+    // 1. before the mapping and
+    // 2. the result after the mapping
     @AfterMapping
     default void updateStreets(AddressDTO addressDTO, @MappingTarget Address address) {
         if (address.getStreets() == null) {
