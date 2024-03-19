@@ -18,7 +18,7 @@
         <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
     </properties>
 
-	<dependencyManagement>
+    <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.junit</groupId>
@@ -29,7 +29,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-	
+
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
