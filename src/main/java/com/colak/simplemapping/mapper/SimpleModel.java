@@ -1,11 +1,11 @@
-package com.colak.simplemapping.model;
+package com.colak.simplemapping.mapper;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class SimpleModel {
+class SimpleModel {
     private String street;
     private String city;
 

@@ -1,11 +1,11 @@
-package com.colak.simplemapping.dto;
+package com.colak.simplemapping.mapper;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class SimpleDTO {
+class SimpleDTO {
     private String street;
     private String city;
 }
