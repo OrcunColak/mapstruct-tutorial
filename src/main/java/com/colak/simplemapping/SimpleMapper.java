@@ -1,4 +1,4 @@
-package com.colak.simplemapping.mapper;
+package com.colak.simplemapping;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;

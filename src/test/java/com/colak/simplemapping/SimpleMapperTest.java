@@ -1,4 +1,4 @@
-package com.colak.simplemapping.mapper;
+package com.colak.simplemapping;
 
 
 import org.junit.jupiter.api.Test;
