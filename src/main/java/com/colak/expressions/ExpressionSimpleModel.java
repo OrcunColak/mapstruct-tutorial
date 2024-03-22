@@ -1,4 +1,4 @@
-package com.colak.expressions.mapper;
+package com.colak.expressions;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

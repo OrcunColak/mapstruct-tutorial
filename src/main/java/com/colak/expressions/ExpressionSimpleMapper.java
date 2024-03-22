@@ -1,4 +1,4 @@
-package com.colak.expressions.mapper;
+package com.colak.expressions;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
