@@ -6,6 +6,7 @@ import org.mapstruct.factory.Mappers;
 
 @Mapper
 interface ExpressionSimpleMapper {
+
     ExpressionSimpleMapper INSTANCE = Mappers.getMapper(ExpressionSimpleMapper.class);
 
     // We can use expressions for complex mappings or to set default values

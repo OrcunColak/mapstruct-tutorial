@@ -60,3 +60,52 @@ public interface ProductMapper {
 ```
 
 # Nested Mapping
+
+```
+@Mapper(uses = ProductMapper.class)
+public interface OrderMapper {
+    OrderDTO orderToOrderDTO(Order order);
+}
+```
+
+# Enum Mapping
+
+```
+@Mapper
+public interface OrderMapper {
+  OrderDTO orderToOrderDTO(Order order);
+
+  @ValueMappings({
+    @ValueMapping(source = "PROCESSING", target = "PENDING"),
+    @ValueMapping(source = "SHIPPED", target = "COMPLETED"),
+    @ValueMapping(source = "DELIVERED", target = "CANCELLED")
+  })
+  OrderStatusDTO mapOrderStatusToOrderStatusDTO(OrderStatus orderStatus);
+}
+```
+
+# Mapping with Null Handling
+
+```
+@Mapper
+public interface ProductMapper {
+  @Mapping(target = "price", source = "price", defaultValue = "0.0")
+  ProductDTO productToProductDTO(Product product);
+}
+```
+
+# Mapping with Custom Converters
+
+```
+@Mapper
+public interface ProductMapper {
+
+  @Mapping(target = "manufactureDate", source = "manufactureDate", qualifiedByName = "stringToLocalDate")
+  Product productDTOToProduct(ProductDTO productDTO);
+
+  @Named("stringToLocalDate")
+  default LocalDate stringToLocalDate(String date) {
+    return LocalDate.parse(date);
+  }
+}
+```
