@@ -7,5 +7,4 @@ import java.util.List;
 @Data
 public class OrderDTO {
     private List<ProductDTO> products;
-    // Getters and setters
 }
